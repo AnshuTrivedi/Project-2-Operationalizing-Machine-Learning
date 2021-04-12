@@ -2,7 +2,7 @@
 # Operationalizing Machine Learning
 
 # Project Overview
-This project is formed by two parts:
+Project majorly based on use of AutoML studio for model train and deploying as web service on swagger and same tasks using Python SDK by  creating ML Pipeline.
 
 The first part consists of creating a machine learning production model using AutoML in Azure Machine Learning Studio, and then deploy the best model and consume it with the help of Swagger UI using the REST API endpoint and the key produced for the deployed model.
 
@@ -47,6 +47,8 @@ The key steps of the project are described below:
        explanations.The Best Model will appear in the Details tab, while it will appear first in the Models tab. This
        is the model that should be selected for deployment. Its deployment allows to interact with the HTTP API service 
        and interact with the model by sending data over POST requests.
+ #### Best model metrics
+ ![best model](https://github.com/AnshuTrivedi/Project-2-Operationalizing-Machine-Learning/blob/master/Images/9.best_model_mterics.png)
       
 ### 4. Enable Logging: 
       After the deployment of the Best Model, I enabled Application Insights and retrieve logs.
