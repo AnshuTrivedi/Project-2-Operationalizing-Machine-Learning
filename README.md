@@ -18,13 +18,13 @@ For both parts of the project. The data is related with direct marketing campaig
 The key steps of the project are described below:
 
 ### 1. Authentication:
-       This step omitted since it could not be implemented in the lab space provided by Udacity,</br>
-       because I am not authorized to create a security principal. However, I am still mentioning it here as</br>
+       This step omitted since it could not be implemented in the lab space provided by Udacity,
+       because I am not authorized to create a security principal. However, I am still mentioning it here as
        it is a crucial step if one uses their own Azure account.
 
 ### 2. Automated ML Experiment: 
-       At this point, security is enabled and authentication is completed. This step involves the creation of</br>
-       an experiment using Automated ML, configuring a compute cluster, and using that cluster to run the</br>
+       At this point, security is enabled and authentication is completed. This step involves the creation of
+       an experiment using Automated ML, configuring a compute cluster, and using that cluster to run the
        experiment.
        
   #### Registered Dataset
@@ -43,9 +43,9 @@ The key steps of the project are described below:
    ![best model](https://github.com/AnshuTrivedi/Project-2-Operationalizing-Machine-Learning/blob/master/Images/8.best_automl_model.png)
 
 ### 3. Deploy the Best Model: 
-       After the completion of the experiment run, a summary of all the models and their metrics are shown, including</br> 
-       explanations.The Best Model will appear in the Details tab, while it will appear first in the Models tab. This</br>
-       is the model that should be selected for deployment. Its deployment allows to interact with the HTTP API service</br> 
+       After the completion of the experiment run, a summary of all the models and their metrics are shown, including
+       explanations.The Best Model will appear in the Details tab, while it will appear first in the Models tab. This
+       is the model that should be selected for deployment. Its deployment allows to interact with the HTTP API service 
        and interact with the model by sending data over POST requests.
       
 ### 4. Enable Logging: 
@@ -59,7 +59,7 @@ The key steps of the project are described below:
     
 
 ### 5. Swagger Documentation:
-        This is the step where the deployed model will be consumed using Swagger. Azure provides a Swagger JSON file for deployed models.</br>
+        This is the step where the deployed model will be consumed using Swagger. Azure provides a Swagger JSON file for deployed models.
         We can find the deployed model in the Endpoints section, where it should be the first one on the list.
         
    #### Running swagger script
@@ -71,15 +71,15 @@ The key steps of the project are described below:
    ![](https://github.com/AnshuTrivedi/Project-2-Operationalizing-Machine-Learning/blob/master/Images/16.swagger_ui_param.png)
 
 ### 6. Consume Model Endpoints:
-       Once the model is deployed, I am using the endpoint.py script to interact with the trained model. I run the script</br>
-       with the scoring_uri that was generated after deployment and -since I enabled Authentication- the key of the service.</br> 
+       Once the model is deployed, I am using the endpoint.py script to interact with the trained model. I run the script
+       with the scoring_uri that was generated after deployment and -since I enabled Authentication- the key of the service. 
        This URI is found in the Details tab, above the Swagger URI.
        
    #### Endpoint script run
    ![end point script](https://github.com/AnshuTrivedi/Project-2-Operationalizing-Machine-Learning/blob/master/Images/17.endpoint.png)
 
 ### 7. Create and Publish a Pipeline: 
-       In this part of the project, I am using the Jupyter Notebook with the same keys, URI, dataset, cluster, and model names already</br> 
+       In this part of the project, I am using the Jupyter Notebook with the same keys, URI, dataset, cluster, and model names already 
        created.
       
    #### Pipeline created
@@ -100,7 +100,7 @@ The key steps of the project are described below:
 ### 8. Documentation:
       The documentation includes:
       
-      1. the screencast that shows the entire process of the working ML application.</br>
+      1. the screencast that shows the entire process of the working ML application.
       2. this README file that describes the project and documents the main steps.
 
 
