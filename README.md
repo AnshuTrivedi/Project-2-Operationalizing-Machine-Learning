@@ -11,7 +11,7 @@ For both parts of the project. The data is related with direct marketing campaig
 
 
 ## Architectural Diagram
-[Project_overview and architectural diag](https://github.com/AnshuTrivedi/Project-2-Operationalizing-Machine-Learning/blob/master/Images/1.project_overview.png)
+![Project_overview and architectural diag](https://github.com/AnshuTrivedi/Project-2-Operationalizing-Machine-Learning/blob/master/Images/1.project_overview.png)
 
 ## Key Steps
 
@@ -21,65 +21,71 @@ The key steps of the project are described below:
        This step was actually omitted since it could not be implemented in the lab space provided by Udacity, because I am not authorized to create a security principal. However, I am still mentioning it here as it is a crucial step if one uses their own Azure account but, obviously, I am not including a screenshot.
 
 ### 2. Automated ML Experiment: 
-       At this point, security is enabled and authentication is completed. This step involves the creation of an experiment using Automated ML, configuring a compute cluster, and using that cluster to run the experiment.
-       #### Registered Dataset
-       ![Dataset](https://github.com/AnshuTrivedi/Project-2-Operationalizing-Machine-Learning/blob/master/Images/2.%20registered_dataset.png)
+       At this point, security is enabled and authentication is completed. This step involves the creation of an experiment using Automated ML, configuring a compute cluster,          and using that cluster to run the experiment.
+       
+  #### Registered Dataset
+  ![Dataset](https://github.com/AnshuTrivedi/Project-2-Operationalizing-Machine-Learning/blob/master/Images/2.%20registered_dataset.png)
 
-       #### Registered dataset detailed view 
-       ![data details](https://github.com/AnshuTrivedi/Project-2-Operationalizing-Machine-Learning/blob/master/Images/3.registered_data_details.png)
+  #### Registered dataset detailed view 
+  ![data details](https://github.com/AnshuTrivedi/Project-2-Operationalizing-Machine-Learning/blob/master/Images/3.registered_data_details.png)
    
-       #### Auto ML experiment configurations
-       ![automl config](https://github.com/AnshuTrivedi/Project-2-Operationalizing-Machine-Learning/blob/master/Images/6.automml_config.png)
+  #### Auto ML experiment configurations
+   ![automl config](https://github.com/AnshuTrivedi/Project-2-Operationalizing-Machine-Learning/blob/master/Images/6.automml_config.png)
 
-       #### Automl Experiment completed
-       ![auto ml exp](https://github.com/AnshuTrivedi/Project-2-Operationalizing-Machine-Learning/blob/master/Images/7.automl_exp_completed.png)
+  #### Automl Experiment completed
+   ![auto ml exp](https://github.com/AnshuTrivedi/Project-2-Operationalizing-Machine-Learning/blob/master/Images/7.automl_exp_completed.png)
 
-       #### Best model 
-       ![best model](https://github.com/AnshuTrivedi/Project-2-Operationalizing-Machine-Learning/blob/master/Images/8.best_automl_model.png)
+  #### Best model 
+   ![best model](https://github.com/AnshuTrivedi/Project-2-Operationalizing-Machine-Learning/blob/master/Images/8.best_automl_model.png)
 
 ### 3. Deploy the Best Model: 
-       After the completion of the experiment run, a summary of all the models and their metrics are shown, including explanations. The Best Model will appear in the Details tab, while it will appear first in the Models tab. This is the model that should be selected for deployment. Its deployment allows to interact with the HTTP API service and interact with the model by sending data over POST requests.
+       After the completion of the experiment run, a summary of all the models and their metrics are shown, including explanations. The Best Model will appear in the Details            tab, while it will appear first in the Models tab. This is the model that should be selected for deployment. Its deployment allows to interact with the HTTP API service          and interact with the model by sending data over POST requests.
       
 ### 4. Enable Logging: 
       After the deployment of the Best Model, I enabled Application Insights and retrieve logs.
-      #### Details tab of Endpoint showing application insights enabled
-      ![insights enabled](https://github.com/AnshuTrivedi/Project-2-Operationalizing-Machine-Learning/blob/master/Images/11.insights_enabled.png)
+      
+  #### Details tab of Endpoint showing application insights enabled
+  ![insights enabled](https://github.com/AnshuTrivedi/Project-2-Operationalizing-Machine-Learning/blob/master/Images/11.insights_enabled.png)
 
-      ####  Running logs script
-     ![running logs](https://github.com/AnshuTrivedi/Project-2-Operationalizing-Machine-Learning/blob/master/Images/12.logs_details.png)
+  ####  Running logs script
+  ![running logs](https://github.com/AnshuTrivedi/Project-2-Operationalizing-Machine-Learning/blob/master/Images/12.logs_details.png)
     
 
 ### 5. Swagger Documentation:
-        This is the step where the deployed model will be consumed using Swagger. Azure provides a Swagger JSON file for deployed models. We can find the deployed model in the Endpoints section, where it should be the first one on the list.
-      #### Running swagger script
-      ![swagger run](https://github.com/AnshuTrivedi/Project-2-Operationalizing-Machine-Learning/blob/master/Images/13.swagger_run.png)
+        This is the step where the deployed model will be consumed using Swagger. Azure provides a Swagger JSON file for deployed models. We can find the deployed model in the           Endpoints section, where it should be the first one on the list.
+        
+   #### Running swagger script
+   ![swagger run](https://github.com/AnshuTrivedi/Project-2-Operationalizing-Machine-Learning/blob/master/Images/13.swagger_run.png)
 
-      #### 
+   #### Swagger response and methods
+   ![]()
 
 ### 6. Consume Model Endpoints:
-       Once the model is deployed, I am using the endpoint.py script to interact with the trained model. I run the script with the scoring_uri that was generated after deployment and -since I enabled Authentication- the key of the service. This URI is found in the Details tab, above the Swagger URI.
-      #### Endpoint script run
-      ![end point script](https://github.com/AnshuTrivedi/Project-2-Operationalizing-Machine-Learning/blob/master/Images/17.endpoint.png)
+       Once the model is deployed, I am using the endpoint.py script to interact with the trained model. I run the script with the scoring_uri that was generated after                  deployment and -since I enabled Authentication- the key of the service. This URI is found in the Details tab, above the Swagger URI.
+       
+   #### Endpoint script run
+   ![end point script](https://github.com/AnshuTrivedi/Project-2-Operationalizing-Machine-Learning/blob/master/Images/17.endpoint.png)
 
 ### 7. Create and Publish a Pipeline: 
        In this part of the project, I am using the Jupyter Notebook with the same keys, URI, dataset, cluster, and model names already created.
-      #### Pipeline created
-      ![pipeline created](https://github.com/AnshuTrivedi/Project-2-Operationalizing-Machine-Learning/blob/master/Images/17.pipeline_created.png)
+      
+   #### Pipeline created
+   ![pipeline created](https://github.com/AnshuTrivedi/Project-2-Operationalizing-Machine-Learning/blob/master/Images/17.pipeline_created.png)
 
-      #### Pipeline Endpoint 
-      ![pipeline endpoint](https://github.com/AnshuTrivedi/Project-2-Operationalizing-Machine-Learning/blob/master/Images/18.pipeline_endpoint.png)
+   #### Pipeline Endpoint 
+   ![pipeline endpoint](https://github.com/AnshuTrivedi/Project-2-Operationalizing-Machine-Learning/blob/master/Images/18.pipeline_endpoint.png)
 
-      #### Published pipeline overview 
-      ![pipeline overview](https://github.com/AnshuTrivedi/Project-2-Operationalizing-Machine-Learning/blob/master/Images/19.pipline_restendpoint.png)
+   #### Published pipeline overview 
+   ![pipeline overview](https://github.com/AnshuTrivedi/Project-2-Operationalizing-Machine-Learning/blob/master/Images/19.pipline_restendpoint.png)
 
-      #### Jupyter Notebook showing *Use RunDetails Widget*
-      ![widget run](https://github.com/AnshuTrivedi/Project-2-Operationalizing-Machine-Learning/blob/master/Images/20.widget_run.png)
+   #### Jupyter Notebook showing *Use RunDetails Widget*
+   ![widget run](https://github.com/AnshuTrivedi/Project-2-Operationalizing-Machine-Learning/blob/master/Images/20.widget_run.png)
 
-      #### In ML Studio scheduled run
-      ![ML scheduled run](https://github.com/AnshuTrivedi/Project-2-Operationalizing-Machine-Learning/blob/master/Images/21.mlstudio_runcompleted.png)
+   #### In ML Studio scheduled run
+   ![ML scheduled run](https://github.com/AnshuTrivedi/Project-2-Operationalizing-Machine-Learning/blob/master/Images/21.mlstudio_runcompleted.png)
 
 ### 8. Documentation: 
-      The documentation includes: 1. the screencast that shows the entire process of the working ML application; and 2. this README file that describes the project and documents the main steps.
+      The documentation includes: 1. the screencast that shows the entire process of the working ML application; and 2. this README file that describes the project and documents        the main steps.
 
 
 ## Screen Recording
